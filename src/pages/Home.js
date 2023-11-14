@@ -12,9 +12,9 @@ const Home = () => {
 
 
  <Main />
- <Footer />
- </div>
 
+ </div>
+ <Footer />
  </>
 )};
 
