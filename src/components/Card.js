@@ -4,7 +4,7 @@ const Card = ({ description, button }) => {
   return (
     <div className="md:relative  md:rounded md:overflow-hidden md:shadow-2xl  md:h-full md:top-56 md:left-20  md:bg-white ">
       <div className="px-3   md:py-20  md:grid  md:text-left lg:pr-20">
-        <p className="text-gray-700 text-lg md:text-xl lg:text-2xl pb-5 p-1 lg:text-2xl md:pb-10">
+        <p className="text-gray-700 text-lg md:text-xl pb-5 p-1 lg:text-2xl md:pb-10">
           {description}
         </p>
         <button>

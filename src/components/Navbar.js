@@ -17,14 +17,14 @@ const Navbar = () => {
         <div className="hidden md:block">
           <div className="nav-links flex justify-between text-lg ">
     
-            <Link to="/" className="p-1.5">
+            <Link to="/" className="p-1.5 font-extrabold text-blue-900">
               Home
             </Link>
-            <Link to="/aboutus" className="p-1.5">About Us</Link>
-            <Link to="/products" className="p-1.5">Products</Link>
-            <Link to="/sellproducts" className="p-1.5">Sell Products</Link>
-            <Link to="/contactus" className="p-1.5">Contact Us</Link>
-            <Link to="/checkout" className="p-1.5">Checkout</Link>
+            <Link to="/aboutus" className="p-1.5 font-extrabold text-blue-900">About Us</Link>
+            <Link to="/products" className="p-1.5 font-extrabold text-blue-900">Products</Link>
+            <Link to="/sellproducts" className="p-1.5 font-extrabold text-blue-900">Sell Products</Link>
+            <Link to="/contactus" className="p-1.5 font-extrabold text-blue-900">Contact Us</Link>
+            <Link to="/checkout" className="p-1.5 font-extrabold text-blue-900">Checkout</Link>
 
             </div>
         </div>
