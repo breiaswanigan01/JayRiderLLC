@@ -10,8 +10,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-200  text-black p-6  ">
-      <div className="lg:flex lg:justify-around">
+    <footer className="  text-black p-6   pt-96 ">
+      <div className="lg:flex ">
         <div className="mb-8">
           {/* display logo again */}
           <Link to="/">
@@ -64,12 +64,13 @@ const Footer = () => {
       </div>
       <div className="lg:flex lg:place-content-end  ">
         <div className="mt-8 flex lg:place-content-end cursor-pointer ">
-          <img
+       <Link to="/checkout" >
+        <img
             src={discover}
             alt="discovercard"
             className="w-14 h-14 opacity-50 hover:opacity-100"
-          />
-
+          /> 
+</Link>
           <img
             src={visaSvg}
             className="w-14 h-14 opacity-50 hover:opacity-100"

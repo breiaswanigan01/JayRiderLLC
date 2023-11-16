@@ -18,7 +18,7 @@ const Navbar = () => {
       {/* // md screen and bigger nav bar */}
       <div className="flex justify-between p-1.5 mb-8 shadow-md">
         <Link to="/">
-          <img src={logo} className="bg-gray-100 w-24" />{" "}
+          <img src={logo} className="bg-gray-100 w-24 lg:w-44" />{" "}
         </Link>
         <div className="text-right">
           <div className="hidden md:block">

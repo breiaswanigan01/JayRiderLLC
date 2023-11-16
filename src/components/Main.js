@@ -5,7 +5,7 @@ const Main = () => {
   return (
     <>
       <h1 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold mt-5  mb-8 md:mb-5 p-1 text-blue-900">
-        Welcome to JayRider Equipment and Transportation!
+        Welcome to JayRider Equipment and Transportation
       </h1>
 
       <div className="text-center md:relative md:flex md:justify-between md:text-xl ">
