@@ -10,12 +10,12 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="  text-black p-6   pt-96 ">
+    <footer className="  text-black p-6 pt-96 ">
       <div className="lg:flex ">
         <div className="mb-8">
           {/* display logo again */}
           <Link to="/">
-            <img src={logo} alt="logo" className="w-32 md:w-36 lg:w-44" />
+            <img src={logo} alt="logo" className="w-40 md:w-36 lg:w-44" />
           </Link>
           {/* <h1 className="text-3xl ">Contact</h1> */}
           <p className="  text-gray-400 text-sm">

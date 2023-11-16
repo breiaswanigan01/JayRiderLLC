@@ -3,6 +3,7 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo2-bg.png";
+import truckImg from "../images/trucks-removebg-preview.png";
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
@@ -15,12 +16,21 @@ const Navbar = () => {
   return (
     // logo
     <>
+    {/* flex justify-between p-1.5 mb-8 shadow-md */}
       {/* // md screen and bigger nav bar */}
+
       <div className="flex justify-between p-1.5 mb-8 shadow-md">
         <Link to="/">
           <img src={logo} className="bg-gray-100 w-24 lg:w-44" />{" "}
         </Link>
-        <div className="text-right">
+        <div className="text-center">
+          <div className="">
+          <img src={truckImg} className="w-24 "/>
+          </div>
+        <p className="">Buy - Sell - Transport</p>
+        <p>Medical - Laboratory - Scientific</p>
+        </div>
+        <div className="text-right ">
           <div className="hidden md:block">
             <div className="nav-links flex justify-between text-lg ">
               <Link to="/" className="p-1.5 font-extrabold text-blue-900">
@@ -59,6 +69,7 @@ const Navbar = () => {
             </div>
           </div>
           {/*  smaller screen nav bar  */}
+   
           <div className=" md:hidden relative ">
             <button onClick={toggleNav}>
               <FontAwesomeIcon
