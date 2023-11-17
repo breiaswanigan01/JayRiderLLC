@@ -10,9 +10,9 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="  text-black p-6 pt-96 ">
-      <div className="lg:flex ">
-        <div className="mb-8">
+    <footer className="  text-black p-6  ">
+      <div className="md:flex md:justify-between md:m-4 lg:flex lg:justify-between  ">
+        <div className="mb-8 m-2 ">
           {/* display logo again */}
           <Link to="/">
             <img src={logo} alt="logo" className="w-40 md:w-36 lg:w-44" />
@@ -29,62 +29,69 @@ const Footer = () => {
             </a>
           </p>
         </div>
-        <div>
-          <div className="text-4xl font-semibold mb-4 md:flex"> </div>
+        <div className="">
+          <div className="text-4xl font-semibold mb-4  "> </div>
           <h1 className=" text-3xl pb-2 text-blue-900">Quick Links</h1>
-          {/* <div className=""> */}
-          <ul className="md:flex lg:grid ">
-            <li className="   hover:bg-gray-400 md:hover:bg-gray-200 lg:hover:bg-gray-400">
-              <a href="/" className=" md:mr-3">
-                Home
-              </a>
-            </li>
-            <li className="hover:bg-gray-400 md:hover:bg-gray-200 lg:hover:bg-gray-400">
-              <a href="/aboutus" className=" md:mr-3">
-                About Us
-              </a>
-            </li>
-            <li className="hover:bg-gray-400 md:hover:bg-gray-200 lg:hover:bg-gray-400">
-              <a href="/products" className=" md:mr-3">
-                Products
-              </a>
-            </li>
-            <li className="hover:bg-gray-400 md:hover:bg-gray-200 lg:hover:bg-gray-400">
-              <a href="/sellproducts" className=" md:mr-3">
-                Sell Your Equipment
-              </a>
-            </li>
-            <li className="hover:bg-gray-400 md:hover:bg-gray-200 lg:hover:bg-gray-400">
-              <a href="/contactus" className=" md:mr-3">
-                Contact Us
-              </a>
-            </li>
-          </ul>
+          <div className="flex">
+            <ul className="  md:whitespace-nowrap lg:grid md:justify-between ">
+              <li className="   hover:bg-gray-400 md:hover:bg-gray-200 lg:hover:bg-gray-400">
+                <a href="/" className=" md:mr-3">
+                  Home
+                </a>
+              </li>
+              <li className="hover:bg-gray-400 md:hover:bg-gray-200 lg:hover:bg-gray-400">
+                <a href="/aboutus" className=" md:mr-3">
+                  About Us
+                </a>
+              </li>
+              <li className="hover:bg-gray-400 md:hover:bg-gray-200 lg:hover:bg-gray-400">
+                <a href="/products" className=" md:mr-3">
+                  Products
+                </a>
+              </li>
+              <li className="hover:bg-gray-400 md:hover:bg-gray-200 lg:hover:bg-gray-400">
+                <a href="/sellproducts" className=" md:mr-3">
+                  Sell Your Equipment
+                </a>
+              </li>
+              <li className="hover:bg-gray-400 md:hover:bg-gray-200 lg:hover:bg-gray-400">
+                <a href="/contactus" className=" md:mr-3">
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div className="lg:flex lg:place-content-end  ">
         <div className="mt-8 flex lg:place-content-end cursor-pointer ">
-       <Link to="/checkout" >
-        <img
-            src={discover}
-            alt="discovercard"
-            className="w-14 h-14 opacity-50 hover:opacity-100"
-          /> 
-</Link>
-          <img
-            src={visaSvg}
-            className="w-14 h-14 opacity-50 hover:opacity-100"
-          />
-          <img
-            src={amex}
-            alt="americanexpress"
-            className="w-14 h-14  opacity-50 hover:opacity-100"
-          />
-          <img
-            src={masterCard}
-            alt="mastercard"
-            className="w-14 h-14  opacity-50 hover:opacity-100"
-          />
+          <Link to="/checkout">
+            <img
+              src={discover}
+              alt="discovercard"
+              className="w-14 h-14 opacity-50 hover:opacity-100"
+            />
+          </Link>
+          <Link to="/checkout">
+            <img
+              src={visaSvg}
+              className="w-14 h-14 opacity-50 hover:opacity-100"
+            />
+          </Link>
+          <Link to="/checkout">
+            <img
+              src={amex}
+              alt="americanexpress"
+              className="w-14 h-14  opacity-50 hover:opacity-100"
+            />
+          </Link>
+          <Link to="/checkout">
+            <img
+              src={masterCard}
+              alt="mastercard"
+              className="w-14 h-14  opacity-50 hover:opacity-100"
+            />
+          </Link>
         </div>
       </div>
       {/* </div> */}

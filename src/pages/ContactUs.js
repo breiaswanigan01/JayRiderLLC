@@ -70,79 +70,85 @@ const ContactUs = () => {
           Contact Us
         </h1>
       </div>
-      <div className=" m-8 text-xl bg-yellow-200  rounded-3xl p-5 ">
+      <div className="m-8 text-xl bg-yellow-200 rounded-3xl p-5">
         <form onSubmit={handleSubmit}>
-          <label className="text">
-            First Name:
-            <input
-              type="text"
-              name="firstName"
-              value={formData.firstName}
-              onChange={handleChange}
-              className="m-2"
-            />
-          </label>
-          <br />
-          <label>
-            Last Name:
-            <input
-              type="text"
-              name="lastName"
-              value={formData.lastName}
-              onChange={handleChange}
-              className="m-2"
-            />
-          </label>
-          <br />
-          <label>
-            Email:
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="m-2"
-            />
-          </label>
-          <br />
-          <label>
-            Phone Number:
-            <input
-              type="tel"
-              name="phoneNumber"
-              value={formData.phoneNumber}
-              onChange={handleChange}
-              className="m-2"
-            />
-          </label>
-          <br />
-          <label>
-            Location:
-            <input
-              type="text"
-              name="location"
-              value={formData.location}
-              onChange={handleChange}
-              className="m-2"
-            />
-          </label>
-          <br />
-          <label>
-            Message:
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              className="m-2"
-            />
-          </label>
-          <br />
-          <button
-            type="submit"
-            className="text-white p-1 m-2 bg-blue-900 hover:bg-blue-700 rounded-3xl w-full"
-          >
-            Submit
-          </button>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="col-span-1">
+              <label className="block">
+                First Name:
+                <input
+                  type="text"
+                  placeholder="First Name"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  className="m-2 p-2 rounded border border-gray-400 focus:outline-none focus:border-blue-500 w-full"
+                />
+              </label>
+              <label className="block">
+                Last Name:
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  className="m-2 p-2 rounded border border-gray-400 focus:outline-none focus:border-blue-500 w-full"
+                />
+              </label>
+              <label className="block">
+                Email:
+                <input
+                  type="email"
+                  placeholder="Email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="m-2 p-2 rounded border border-gray-400 focus:outline-none focus:border-blue-500 w-full"
+                />
+              </label>
+              <label className="block">
+                Phone Number:
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  name="phoneNumber"
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
+                  className="m-2 p-2 rounded border border-gray-400 focus:outline-none focus:border-blue-500 w-full"
+                />
+              </label>
+              <label className="block">
+                Location:
+                <input
+                  type="text"
+                  placeholder="Location"
+                  name="location"
+                  value={formData.location}
+                  onChange={handleChange}
+                  className="m-2 p-2 rounded border border-gray-400 focus:outline-none focus:border-blue-500 w-full"
+                />
+              </label>
+            </div>
+            <div className="col-span-1">
+              <label className="block">
+                Message:
+                <textarea
+                  name="message"
+                  placeholder="Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="m-2 p-2 rounded border border-gray-400 focus:outline-none focus:border-blue-500 w-full h-32"
+                />
+              </label>
+              <button
+                type="submit"
+                className="text-white p-2 bg-blue-900 hover:bg-blue-700 rounded-3xl w-full focus:outline-none"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
         </form>
       </div>
       <div className="text-4xl grid">

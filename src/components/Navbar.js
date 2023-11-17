@@ -14,25 +14,31 @@ const Navbar = () => {
     setShowNav(false);
   };
   return (
-    // logo
     <>
-    {/* flex justify-between p-1.5 mb-8 shadow-md */}
       {/* // md screen and bigger nav bar */}
-
-      <div className="flex justify-between p-1.5 mb-8 shadow-md">
-        <Link to="/">
-          <img src={logo} className="bg-gray-100 w-24 lg:w-44" />{" "}
-        </Link>
-        <div className="text-center">
-          <div className="">
-          <img src={truckImg} className="w-24 "/>
+      <div className=" p-1.5 mb-8 shadow-md ">
+        <div className=" flex justify-between">
+          <Link to="/">
+            <img src={logo} className="w-44 " alt="Logo" />
+          </Link>
+          <div className="whitespace-nowrap mt-10 text-blue-900 font-bold">
+            <div className=" text-center ">
+              <p className=" text-lg lg:text-2xl ">Buy - Sell - Transport </p>
+              <p className="text-lg lg:text-2xl ">
+                Medical - Laboratory - Scientific{" "}
+              </p>
+            </div>
           </div>
-        <p className="">Buy - Sell - Transport</p>
-        <p>Medical - Laboratory - Scientific</p>
+          <div className="mt-3 text-right">
+            <img src={truckImg} className="w-44 md:w-auto" alt="Truck" />
+          </div>
         </div>
+
+        {/*  smaller screen nav bar  */}
+
         <div className="text-right ">
           <div className="hidden md:block">
-            <div className="nav-links flex justify-between text-lg ">
+            <div className="nav-links flex justify-end text-md lg:text-large ">
               <Link to="/" className="p-1.5 font-extrabold text-blue-900">
                 Home
               </Link>
@@ -68,9 +74,8 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-          {/*  smaller screen nav bar  */}
-   
-          <div className=" md:hidden relative ">
+
+          <div className="  md:hidden  ">
             <button onClick={toggleNav}>
               <FontAwesomeIcon
                 icon={showNav ? faBars : faBars}
