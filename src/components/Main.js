@@ -8,6 +8,8 @@ import medImg2 from "../images/med-equipment-2.jpeg";
 import medImg3 from "../images/robotarm-lab-istock.jpeg";
 import labImg3 from "../images/woman-lab.jpeg";
 import labImg4 from "../images/lab-people.jpeg";
+import labImg5 from "../images/man-equipment.jpeg";
+import labImg6 from "../images/researcher-putting-test-tube-into-laboratory-centrifuge.jpg";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
 const Main = () => {
@@ -50,32 +52,43 @@ const Main = () => {
       <div className="flex items-center justify-center ">
         <MdChevronLeft
           onClick={scrollLeft}
-          className="text-blue-600 text-4xl cursor-pointer lg:hidden"
+          className="text-blue-900 text-6xl cursor-pointer "
         />
         <div
           ref={sliderRef}
           className="flex overflow-x-auto space-x-4 p-2"
           style={{
             width: "100%",
-            scrollBehavior: "smooth",
-            scrollBehavior: "smooth",
-            scrollbarWidth: "none", // Hide the scrollbar
-            "-ms-overflow-style": "none",
+            scrollbarWidth: "none", // Hide the scrollbar for Firefox
+            "-ms-overflow-style": "none", // Hide the scrollbar for IE/Edge
+            WebkitOverflowScrolling: "touch", // Enable smooth scrolling for iOS devices
+            // Additional styles to hide scrollbars (optional)
+            "&::-webkit-scrollbar": {
+              display: "none", // Hide scrollbar for Chrome/Safari
+            },
+            "&::-moz-scrollbar": {
+              display: "none", // Hide scrollbar for Firefox
+            },
+            "&::-ms-scrollbar": {
+              display: "none", // Hide scrollbar for IE/Edge
+            },
           }}
         >
-          <div className="flex  ">
-            <img src={medImg1} className="w-48 h-48" />
-            <img src={labImg1} className="w-48 h-48" />
-            <img src={labImg2} className="w-48 h-48" />
-            <img src={medImg2} className="w-48 h-48" />
-            <img src={medImg3} className="w-48 h-48" />
-            <img src={labImg3} className="w-48 h-48" />
-            <img src={labImg4} className="w-48 h-48" />
+          <div className="flex ">
+            <img src={medImg1} className=" w-48 h-48 m-1" />
+            <img src={labImg1} className="w-48 h-48 m-1" />
+            <img src={labImg2} className="w-48 h-48 m-1" />
+            <img src={medImg2} className="w-48 h-48 m-1" />
+            <img src={medImg3} className="w-48 h-48 m-1" />
+            <img src={labImg3} className="w-48 h-48 m-1" />
+            <img src={labImg4} className="w-48 h-48 m-1" />
+            <img src={labImg5} className="w-48 h-48 m-1" />
+            <img src={labImg6} className="w-48 h-48 m-1" />
           </div>
         </div>
         <MdChevronRight
           onClick={scrollRight}
-          className="text-blue-600 text-4xl cursor-pointer lg:hidden"
+          className="text-blue-900 text-6xl cursor-pointer "
         />
       </div>
 

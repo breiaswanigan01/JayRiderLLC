@@ -21,10 +21,12 @@ const Navbar = () => {
           <Link to="/">
             <img src={logo} className="w-44 " alt="Logo" />
           </Link>
-          <div className="whitespace-nowrap mt-10 text-blue-900 font-bold">
+          <div className="whitespace-nowrap text-center   text-blue-900 font-bold">
             <div className=" text-center ">
-              <p className=" text-lg lg:text-2xl ">Buy - Sell - Transport </p>
-              <p className="text-lg lg:text-2xl ">
+              <p className=" text-lg md:text-xl lg:text-3xl ">
+                Buy - Sell - Transport{" "}
+              </p>
+              <p className="text-lg md:text-xl lg:text-3xl ">
                 Medical - Laboratory - Scientific{" "}
               </p>
             </div>
@@ -38,7 +40,7 @@ const Navbar = () => {
 
         <div className="text-right ">
           <div className="hidden md:block">
-            <div className="nav-links flex justify-end text-md lg:text-large ">
+            <div className="nav-links text-bold flex justify-end text-md md:text-lg lg:text-large lg:flex lg:justify-between lg:text-xl ">
               <Link to="/" className="p-1.5 font-extrabold text-blue-900">
                 Home
               </Link>

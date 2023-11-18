@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/firestore';
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Products from "./pages/Products";
@@ -12,12 +12,13 @@ import "./App.css";
 
 import Navbar from "./components/Navbar";
 import Card from "./components/Card";
+import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <div className="bg-gray-100">
+      <div className="bg-white">
         <Navbar />
-     
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/aboutus" element={<AboutUs />} />
@@ -29,7 +30,7 @@ function App() {
 <Route path="/signup" element={<Signup />} />
 <Route path="/profile" element={<Profile />} /> */}
         </Routes>
-        
+        <Footer />
       </div>
     </>
   );

@@ -47,7 +47,7 @@ export const AboutUs = () => {
           Country
         </p>
       </div>
-      <Footer />
+
     </>
   );
 };
