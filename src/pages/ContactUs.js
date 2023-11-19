@@ -246,7 +246,7 @@ const ContactUs = () => {
         <span className="text-black">
           Would you like to sell your equipment?
         </span>{" "}
-        <Link to="/sellProducts" className="text-gray-200">
+        <Link to="/sellProducts" className="text-gray-400">
           Click Here
         </Link>
       </p>

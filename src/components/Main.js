@@ -51,72 +51,44 @@ const Main = () => {
         <div className="flex items-center justify-center ">
           <MdChevronLeft
             onClick={scrollLeft}
-            className="text-blue-900 text-6xl cursor-pointer "
+            className="text-blue-900 text-6xl cursor-pointer lg:hidden"
           />
           <div
             ref={sliderRef}
-            className="grid grid-rows-1 overflow-x-auto scrollbar-hide space-x-4 p-2 w-full"
+            className=" overflow-x-auto scrollbar-hide space-x-4 p-2 w-full"
             style={{
               scrollSnapType: "x mandatory",
               width: "100%",
-              // scrollbarWidth: "none", // Hide the scrollbar for Firefox
-              // "-ms-overflow-style": "none", // Hide the scrollbar for IE/Edge
+
               transform: "translateX(0)",
             }}
           >
-            <div className="flex  object-fill">
-              {/* <img
-                src={medImg1}
-                className="   w-48 h-48 m-2 lg:w-72 lg:h-60 select-none"
-                alt="img"
-              /> */}
+            <div className="flex lg:flex lg:justify-between  object-fill ">
               <img
                 src={labImg1}
-                className="shadow-md border-4 border-gray-100 w-48 h-48 m-2 lg:w-72 lg:h-60  select-none"
+                className="rotate-45 shadow-md border-4 border-gray-100 w-72 h-60  select-none mt-20 ml-12   "
                 alt="img"
               />
-
-              <img
-                src={labImg2}
-                className="shadow-md border-4 border-gray-100 w-56 h-48 m-2 lg:w-72 lg:h-60  select-none"
-                alt="img"
-              />
-
               <img
                 src={medImg2}
-                className="shadow-md border-4 border-gray-100 w-48 h-48 m-2 lg:w-72 lg:h-60  select-none"
-                alt="img"
-              />
-              <img
-                src={medImg3}
-                className="shadow-md border-4 border-gray-100 w-48 h-48 m-2 lg:w-72 lg:h-60  select-none"
-                alt="img"
-              />
-              <img
-                src={labImg3}
-                className="shadow-md border-4 border-gray-100 w-48 h-48 m-2 lg:w-72 lg:h-60  select-none"
-                alt="img"
-              />
-              <img
-                src={labImg4}
-                className="shadow-md border-4 border-gray-100 w-48 h-48 m-2 lg:w-72 lg:h-60  select-none"
+                className="rotate-45 shadow-md border-4 border-gray-100 w-72 h-60   mt-20 ml-12     select-none"
                 alt="img"
               />
               <img
                 src={labImg5}
-                className="shadow-md border-4 border-gray-100 w-48 h-48 m-2 lg:w-72 lg:h-60  select-none"
+                className="rotate-45 shadow-md border-4 border-gray-100 w-72 h-60  select-none mt-20 ml-12  "
                 alt="img"
               />
               <img
                 src={labImg6}
-                className="shadow-md border-4 border-gray-100 w-48 h-48 m-2 lg:w-72 lg:h-60  select-none"
+                className="rotate-45 shadow-md border-4 border-gray-100 w-72 h-60  select-none m-24 ml-16  "
                 alt="img"
               />
             </div>
           </div>
           <MdChevronRight
             onClick={scrollRight}
-            className="text-blue-900 text-6xl cursor-pointer "
+            className="text-blue-900 text-6xl cursor-pointer lg:hidden"
           />
         </div>
       </div>
