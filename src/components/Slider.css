@@ -1,0 +1,23 @@
+/* Slider.css */
+
+.slider-container {
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-image {
+  scroll-snap-align: center;
+  margin: 0 8px;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Animation classes */
+.rotate-left {
+  transform: rotate(360deg);
+}
+
+.rotate-right {
+  transform: rotate(-360deg);
+}

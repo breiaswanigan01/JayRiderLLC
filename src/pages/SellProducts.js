@@ -1,9 +1,14 @@
-import React, { useState, useRef } from "react";
-import { db } from "../firebase"; // Import your Firebase configuration
+import React, { useState, useRef, useEffect } from "react";
+import { db, storage, storage2 } from "../firebase"; // Import your Firebase configuration
 import { collection, addDoc } from "firebase/firestore";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const SellProducts = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top when the component loads
+  }, []);
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -30,8 +35,9 @@ const SellProducts = () => {
     });
   };
   const handleFileChange = (e) => {
-    const files = Array.from(e.target.files);
+    const files = e.target.files;
     setSelectedFiles([...selectedFiles, ...files]);
+    console.log("clicked files");
   };
   const handleButtonClick = () => {
     fileInputRef.current.click();
@@ -48,11 +54,65 @@ const SellProducts = () => {
         } is required`;
       }
     }
+    // Check for phone number format (xxx-xxx-xxxx)
+    if (!/^\d{3}-\d{3}-\d{4}$/.test(formData.phoneNumber)) {
+      newErrors["phoneNumber"] =
+        "Phone number should be in xxx-xxx-xxxx format";
+    }
+    console.log("Form Data:", formData);
+
     if (Object.keys(newErrors).length === 0) {
       try {
+        // Prepare the data for Firestore
+        const formDataForFirestore = {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phoneNumber: formData.phoneNumber,
+          companyName: formData.companyName,
+          location: formData.location,
+          productName: formData.productName,
+          manufacturer: formData.manufacturer,
+          model: formData.model,
+          condition: formData.condition,
+          attachments: [],
+
+          comments: formData.comments,
+        };
+      
+
+        // Get a reference to Firebase Storage
+        const storageRef = ref(storage, "gs://jayriderllc-e93e8.appspot.com/JayRiderLLC"); // Replace 'attachments' with your desired storage path
+
+        // Upload selected files to Firebase Storage
+        const uploadedFiles = await Promise.all(
+          selectedFiles.map(async (file) => {
+            const fileRef = ref(storageRef, file.name);
+            try {
+              console.log("Uploading file:", file.name);
+              await uploadBytes(fileRef, file);
+              const downloadURL = await getDownloadURL(fileRef);
+              console.log("File uploaded:", file.name, "URL:", downloadURL);
+              return {
+                name: file.name,
+                size: file.size,
+                type: file.type,
+                downloadURL,
+              };
+            } catch (uploadError) {
+              console.error("Error uploading file:", file.name, uploadError);
+              throw uploadError; // Propagate the error to catch block
+            }
+          })
+        );
+  
+
+        // Update the form data with uploaded file details
+        formDataForFirestore.attachments = uploadedFiles;
+
         // Submit the form data to Firestore
-        await addDoc(collection(db, "sellEquipmentForm"), formData);
-        console.log("Form data submitted to Firestore:", formData);
+        await addDoc(collection(db, "sellEquipmentForm"), formDataForFirestore);
+        console.log("Form data submitted to Firestore:", formDataForFirestore);
 
         // Clear the form after successful submission
         setFormData({
@@ -66,9 +126,13 @@ const SellProducts = () => {
           manufacturer: "",
           model: "",
           condition: "",
+          attachments: [],
           comments: "",
         });
 
+        setSelectedFiles([]); // Clear selected files after submission
+      // Display image URLs to check if files are uploaded
+      console.log("Uploaded Image URLs:", uploadedFiles.map((file) => file.downloadURL));
         alert("Form submitted successfully!");
       } catch (error) {
         console.error("Error submitting form:", error);
@@ -139,14 +203,17 @@ const SellProducts = () => {
           <div>
             {/* number */}
             <label htmlFor="number" className="text-blue-900">
-              Number
+              Number<span className="text-red-500 pl-1">*</span>{" "}
+              <span className="text-black text-sm"> format:(xxx-xxx-xxxx)</span>
             </label>
             <input
-              type="tel"
+              type="text"
               id="number"
-              name="number"
-              value={formData.number}
+              name="phoneNumber"
+              value={formData.phoneNumber}
               onChange={handleChange}
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              title="Phone number should be in xxx-xxx-xxxx format"
               className="border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:border-blue-500"
             />
           </div>

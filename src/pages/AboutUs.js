@@ -5,11 +5,11 @@ export const AboutUs = () => {
   return (
     <>
       <div className="text-center ">
-        <h1 className="pb-4 font-extrabold text-4xl border-b-4 border-blue-900 inline-block">
+        <h1 className="pb-4 font-extrabold text-4xl lg:text-5xl border-b-4 border-blue-900 inline-block">
           About Us
         </h1>
       </div>
-      <div className="text-center mb-28 bg-white mt-10 leading-7 text-md md:text-lg rounded-lg m-8 p-4 md:shadow-2xl">
+      <div className="text-center mb-28 bg-white mt-10 leading-7 text-md md:text-lg rounded-lg m-8 p-4 shadow-lg md:shadow-2xl">
         <p>
           Welcome to JayRider Equipment and Transportation, your trusted partner
           for all your laboratory, medical, and scientific equipment needs.
@@ -21,9 +21,7 @@ export const AboutUs = () => {
         <br />
         <p>
           We take pride in our commitment to delivering high-quality equipment
-          that meets and exceeds industry standards. With a team of dedicated
-          professionals and experts in the field, we specialize in buying,
-          selling, and transporting a diverse range of equipment.
+          that meets and exceeds industry standards. 
         </p>
         <br />
         <p>
@@ -47,7 +45,6 @@ export const AboutUs = () => {
           Country
         </p>
       </div>
-
     </>
   );
 };

@@ -242,11 +242,13 @@ const ContactUs = () => {
         </div>
       </div>
       {/* <div> */}
-      <p className="py-10 ">
-        <span className="text-gray-600">
+      <p className="py-10 text-center">
+        <span className="text-black">
           Would you like to sell your equipment?
         </span>{" "}
-        <Link to="/sellProducts">Click Here</Link>
+        <Link to="/sellProducts" className="text-gray-200">
+          Click Here
+        </Link>
       </p>
       {/* </div> */}
     </>

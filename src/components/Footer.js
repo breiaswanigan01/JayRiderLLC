@@ -10,9 +10,9 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="  text-black p-6 mt-96 ">
-      <div className="  md:flex md:justify-between md:m-4 lg:flex lg:justify-evenly  ">
-        <div className="lg:mr-36">
+    <footer className="  text-black p-6 mt-80 ">
+      <div className="  md:flex md:justify-between md:m-4  ">
+        <div className="">
           <div className="mb-8 m-2 ">
             {/* display logo again */}
             <Link to="/">
@@ -20,7 +20,7 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="">
+        <div className="lg:mr-40">
           <div className="text-4xl font-semibold mb-4  "> </div>
           <h1 className=" text-3xl md:text-4xl lg:text-5xl pb-2 mb-2 text-blue-900">
             Quick Links

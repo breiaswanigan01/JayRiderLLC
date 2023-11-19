@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo2-bg.png";
@@ -16,6 +17,7 @@ const Navbar = () => {
   return (
     <>
       {/* // md screen and bigger nav bar */}
+   
       <div className=" p-1.5 mb-8 shadow-md ">
         <div className=" flex justify-between">
           <Link to="/">
@@ -37,7 +39,7 @@ const Navbar = () => {
         </div>
 
         {/*  smaller screen nav bar  */}
-
+<div className="relative z-10">
         <div className="text-right ">
           <div className="hidden md:block">
             <div className="nav-links text-bold flex justify-end text-md md:text-lg lg:text-large lg:flex lg:justify-between lg:text-xl ">
@@ -72,7 +74,10 @@ const Navbar = () => {
                 to="/checkout"
                 className="p-1.5 font-extrabold text-blue-900"
               >
-                Checkout
+                <FontAwesomeIcon
+                  icon={faCartShopping}
+                  style={{ color: "#1e3a8a" }}
+                />
               </Link>
             </div>
           </div>
@@ -112,13 +117,18 @@ const Navbar = () => {
                 <Link to="/sellproducts" onClick={closeNav}>
                   Sell Products
                 </Link>
-                <Link to="/checkout" onClick={closeNav}>
-                  Checkout
-                </Link>
+
                 <Link to="/contactus" onClick={closeNav}>
                   Contact Us
                 </Link>
+                <Link to="/checkout" onClick={closeNav}>
+                  <FontAwesomeIcon
+                    icon={faCartShopping}
+                    style={{ color: "#1e3a8a" }}
+                  />
+                </Link>
               </div>
+            </div>
             </div>
           </div>
         </div>
