@@ -1,16 +1,18 @@
 import React, { useRef } from "react";
 import homepageImg from "../images/med-room.jpeg";
 import Card from "./Card";
-import medImg1 from "../images/modern-healthcare.jpg";
 import labImg1 from "../images/labequipment-2.jpeg";
-import labImg2 from "../images/centrifuge-machine.jpeg";
 import medImg2 from "../images/woman-lab3.jpg";
-import medImg3 from "../images/robotarm-lab-istock.jpeg";
-import labImg3 from "../images/woman-lab2.jpg";
-import labImg4 from "../images/lab-people.jpeg";
 import labImg5 from "../images/man-equipment.jpeg";
 import labImg6 from "../images/researcher-putting-test-tube-into-laboratory-centrifuge.jpg";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+import equipment1 from "../images/equipment1.jpg";
+import equipment2 from "../images/equipment2.jpg";
+import equipment3 from "../images/equipment3.jpg";
+import equipment4 from "../images/equipment4.jpg";
+import equipment5 from "../images/equipment5.png";
+import equipment6 from "../images/equipment6.jpg";
+import equipment7 from "../images/equipment7.webp";
 
 const Main = () => {
   const sliderRef = useRef(null);
@@ -39,7 +41,7 @@ const Main = () => {
         Welcome to JayRider Equipment and Transportation
       </h1>
 
-      <div className="text-center md:flex md:justify-between md:text-xl ">
+      <div className="text-center md:flex md:justify-between lg:flex lg:justify-center md:text-xl ">
         {/* Mobile-friendly content */}
         <Card
           className=""
@@ -48,7 +50,7 @@ const Main = () => {
           button="Explore Products"
         />
 
-        <div className="flex items-center justify-center ">
+        <div className="flex items-center justify-center">
           <MdChevronLeft
             onClick={scrollLeft}
             className="text-blue-900 text-6xl cursor-pointer lg:hidden"
@@ -66,22 +68,17 @@ const Main = () => {
             <div className="flex lg:flex lg:justify-between  object-fill ">
               <img
                 src={labImg1}
-                className="rotate-45 shadow-md border-4 border-gray-100 w-72 h-60  select-none mt-20 ml-12   "
-                alt="img"
-              />
-              <img
-                src={medImg2}
-                className="rotate-45 shadow-md border-4 border-gray-100 w-72 h-60   mt-20 ml-12     select-none"
+                className=" shadow-md border-4 border-gray-100 w-72 h-72 lg:w-80 lg:h-80 select-none mt-20 m-6  "
                 alt="img"
               />
               <img
                 src={labImg5}
-                className="rotate-45 shadow-md border-4 border-gray-100 w-72 h-60  select-none mt-20 ml-12  "
+                className=" shadow-md border-4 border-gray-100 w-72 h-72 lg:w-screen lg:h-96  m-6 select-none mt-20  "
                 alt="img"
               />
               <img
-                src={labImg6}
-                className="rotate-45 shadow-md border-4 border-gray-100 w-72 h-60  select-none m-24 ml-16  "
+                src={medImg2}
+                className=" shadow-md border-4 border-gray-100 w-72 h-72 lg:w-80 lg:h-80   mt-20   m-6 select-none"
                 alt="img"
               />
             </div>
@@ -92,9 +89,47 @@ const Main = () => {
           />
         </div>
       </div>
+      <div className="hidden  md:flex md:justify-evenly mt-8 md:ml-2 md:mr-2">
+        {/* <div>
+          <img src={equipment1} className="w-44 h-44" />
+        </div> */}
+        <div>
+          <img
+            src={equipment2}
+            className=" shadow-lg border-4 p-5 border-gray-200 md:w-48 md:h-48 lg:w-64 lg:h-56"
+          />
+        </div>
+        <div>
+          <img
+            src={equipment3}
+            className=" shadow-lg border-4 border-gray-200 md:w-48 md:h-48 lg:w-64 lg:h-56"
+          />
+        </div>
+        <div>
+          <img
+            src={equipment4}
+            className=" shadow-lg border-4 border-gray-200 md:w-48 md:h-48 lg:w-64 lg:h-56"
+          />
+        </div>
+        <div>
+          <img
+            src={equipment5}
+            className="  shadow-lg border-4 border-gray-200 md:w-48 md:h-48 lg:w-64 lg:h-56"
+          />
+        </div>
+        <div>
+          <img
+            src={equipment6}
+            className=" shadow-md border-4 border-gray-200 md:w-48 md:h-48 lg:w-64 lg:h-56"
+          />
+        </div>
+        {/* <div>
+          <img src={equipment7} className="w-44 h-44" />
+        </div> */}
+      </div>
       <div>
         <img
-          className=" mt-4 w-full h-[100vh] object-cover  select-none "
+          className=" mt-4 w-full h-[100vh] object-fill md:object-cover  select-none "
           src={homepageImg}
           alt="homepage-img"
         />
