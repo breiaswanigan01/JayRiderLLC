@@ -37,7 +37,7 @@ const Navbar = () => {
             <div className="mt-1 ">
               <img
                 src={truckImg}
-                className=" w-full    rounded-lg "
+                className=" w-56 md:mt-5   rounded-lg "
                 alt="Truck"
               />
             </div>
@@ -48,14 +48,14 @@ const Navbar = () => {
           <div className="text-right ">
             <div className="hidden md:block">
               <div className="nav-links text-bold flex justify-end text-md md:text-lg lg:text-large lg:flex lg:justify-between lg:text-xl relative z-20">
-                <Link to="/" className="p-1.5 font-extrabold text-blue-900">
+                <Link to="/" className="p-1.5 font-extrabold text-blue-900 ">
                   Home
                 </Link>
                 <Link
                   to="/aboutus"
                   className="p-1.5 font-extrabold text-blue-900"
                 >
-                  About 
+                  About
                 </Link>
                 <Link
                   to="/products"
@@ -65,7 +65,7 @@ const Navbar = () => {
                 </Link>
                 <Link
                   to="/sellproducts"
-                  className="p-1.5 font-extrabold text-blue-900"
+                  className="p-1.5 font-extrabold  text-blue-900"
                 >
                   Sell Products
                 </Link>
@@ -91,7 +91,7 @@ const Navbar = () => {
               <button onClick={toggleNav}>
                 <FontAwesomeIcon
                   icon={showNav ? faBars : faBars}
-                  className="text-3xl p-1.5"
+                  className="text-3xl p-1.5  "
                 />
               </button>
 
@@ -110,26 +110,42 @@ const Navbar = () => {
                     />
                   </button>
                   {/* nav links */}
-                  <Link to="/" onClick={closeNav}>
+                  <Link to="/" onClick={closeNav} className="text-black">
                     Home
                   </Link>
-                  <Link to="/aboutus" onClick={closeNav}>
+                  <Link to="/aboutus" onClick={closeNav} className="text-black">
                     About Us
                   </Link>
-                  <Link to="/products" onClick={closeNav}>
+                  <Link
+                    to="/products"
+                    onClick={closeNav}
+                    className="text-black"
+                  >
                     Products
                   </Link>
-                  <Link to="/sellproducts" onClick={closeNav}>
+                  <Link
+                    to="/sellproducts"
+                    onClick={closeNav}
+                    className="text-black"
+                  >
                     Sell Products
                   </Link>
 
-                  <Link to="/contactus" onClick={closeNav}>
+                  <Link
+                    to="/contactus"
+                    onClick={closeNav}
+                    className="text-black"
+                  >
                     Contact Us
                   </Link>
-                  <Link to="/checkout" onClick={closeNav}>
+                  <Link
+                    to="/checkout"
+                    onClick={closeNav}
+                    className="text-black"
+                  >
                     <FontAwesomeIcon
                       icon={faCartShopping}
-                      style={{ color: "#1e3a8a" }}
+                      style={{ color: "#000" }}
                     />
                   </Link>
                 </div>

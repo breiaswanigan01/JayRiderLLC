@@ -15,5 +15,5 @@ const app = initializeApp(firebaseConfig);
 // export const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 // storage
-const storage = getStorage(app,"gs://jayriderllc-e93e8.appspot.com" )
+const storage = getStorage(app )
 export { db, storage,  };

@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
-import { db, storage, storage2 } from "../firebase"; // Import your Firebase configuration
+import { db, storage } from "../firebase"; // Import your Firebase configuration
 import { collection, addDoc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { v4 } from "uuid";
 const SellProducts = () => {
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to the top when the component loads
@@ -36,6 +37,7 @@ const SellProducts = () => {
   };
   const handleFileChange = (e) => {
     const files = e.target.files;
+
     setSelectedFiles([...selectedFiles, ...files]);
     console.log("clicked files");
   };
@@ -56,8 +58,7 @@ const SellProducts = () => {
     }
     // Check for phone number format (xxx-xxx-xxxx)
     if (!/^\d{3}-\d{3}-\d{4}$/.test(formData.phoneNumber)) {
-      newErrors["phoneNumber"] =
-        "Phone number should be in xxx-xxx-xxxx format";
+      newErrors["phoneNumber"] = "xxx-xxx-xxxx";
     }
     console.log("Form Data:", formData);
 
@@ -79,11 +80,9 @@ const SellProducts = () => {
 
           comments: formData.comments,
         };
-      
 
         // Get a reference to Firebase Storage
-        const storageRef = ref(storage, "gs://jayriderllc-e93e8.appspot.com/JayRiderLLC"); // Replace 'attachments' with your desired storage path
-
+        const storageRef = ref(storage, `JayRiderLLC/${v4()}`); // Replace 'attachments' with your desired storage path
         // Upload selected files to Firebase Storage
         const uploadedFiles = await Promise.all(
           selectedFiles.map(async (file) => {
@@ -105,7 +104,6 @@ const SellProducts = () => {
             }
           })
         );
-  
 
         // Update the form data with uploaded file details
         formDataForFirestore.attachments = uploadedFiles;
@@ -131,9 +129,12 @@ const SellProducts = () => {
         });
 
         setSelectedFiles([]); // Clear selected files after submission
-      // Display image URLs to check if files are uploaded
-      console.log("Uploaded Image URLs:", uploadedFiles.map((file) => file.downloadURL));
-        alert("Form submitted successfully!");
+        // Display image URLs to check if files are uploaded
+        console.log(
+          "Uploaded Image URLs:",
+          uploadedFiles.map((file) => file.downloadURL)
+        );
+        alert("Thank you for your submission!");
       } catch (error) {
         console.error("Error submitting form:", error);
       }
@@ -145,14 +146,16 @@ const SellProducts = () => {
 
   return (
     <>
+    {/* header */}
       <div className="text-center mb-12">
         <h1 className="pb-4 font-extrabold text-center text-4xl lg:text-5xl border-b-4 border-blue-900  inline-block">
           Sell Your Equipment
         </h1>
       </div>
       <div className="mx-auto max-w-xl lg:max-w-5xl text-lg bg-white p-6 rounded-2xl">
+        {/* sell equipment form start */}
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* <div className=""> */}
+        
           <div className="md:flex md:flex-wrap md:-mx-2">
             <div className="md:w-1/2 md:px-2 mb-4">
               {/* first name */}
@@ -384,6 +387,8 @@ const SellProducts = () => {
             </button>
           </div>
         </form>
+        {/* sell equipment form end */}
+
       </div>
     </>
   );

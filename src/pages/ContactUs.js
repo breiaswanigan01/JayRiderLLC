@@ -53,7 +53,7 @@ const ContactUs = () => {
           message: "",
         });
 
-        alert("Form submitted successfully!");
+        alert("Thank you for your submission! We will be in contact soon.");
       } catch (error) {
         console.error("Error submitting form:", error);
       }
@@ -77,7 +77,9 @@ const ContactUs = () => {
         </p>
 
         <div className="m-8 text-lg  rounded-3xl p-5 lg:flex lg:justify-center">
+       
           <form onSubmit={handleSubmit} className=" ">
+          <div className=" lg:w-[50vw]">
             <div className="lg:mr-12">
               <div className="flex flex-col mb-4">
                 <label
@@ -168,6 +170,7 @@ const ContactUs = () => {
                 >
                   Submit
                 </button>
+                </div>
                 <div>
                   {errors.email && (
                     <p className="text-red-500">{errors.email}</p>
@@ -184,13 +187,13 @@ const ContactUs = () => {
             </div>
           </form>
 
-          <div className="  grid mt-10 lg:ml-12">
-            <div className="flex  border-b-2 mb-4">
+          <div className="  grid mt-10 lg:ml-12 ">
+            <div className="flex  border-b-2 mb-4 ">
               {/* <div className=" flex "> */}
               <FontAwesomeIcon
                 icon={faLocationDot}
                 style={{ color: "white" }}
-                className="  ml-1 items-center bg-blue-900 rounded-full p-3  "
+                className="  cursor-pointer ml-1 items-center bg-blue-900 rounded-full p-3  "
               />
               <div className="pl-5">
                 <p className="text-gray-500 text-md">Address</p>
@@ -201,11 +204,15 @@ const ContactUs = () => {
               {/* </div> */}
             </div>
             <div className="flex border-b-2 mb-4">
-              <FontAwesomeIcon
+         
+        
+           
+            <a href="tel:+2488620663"> <FontAwesomeIcon
                 icon={faPhone}
                 style={{ color: "white" }}
-                className="  ml-1 items-center bg-blue-900 rounded-full p-3 "
+                className=" cursor-pointer ml-1 items-center bg-blue-900 rounded-full p-3 "
               />
+               </a>
               <div className="pl-5">
                 <p className="text-gray-500 text-md">Phone</p>
                 <p className="text-xl  mb-4">(248) 862-0663</p>

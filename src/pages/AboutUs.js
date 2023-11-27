@@ -33,7 +33,7 @@ export const AboutUs = () => {
           <br />
           Our mission is simple yet profound: to be the preferred partner for
           laboratories, medical facilities, and research institutions seeking
-          reliable and state-of-the-art equipment. We are driven by a set of
+          reliable and state-of-the-art equipment and transport of equipment. We are driven by a set of
           core values that include integrity, innovation, and customer
           satisfaction.
         </p>
@@ -41,7 +41,7 @@ export const AboutUs = () => {
         <p>Commercial and industrial thoughout the Midwest</p>
         <br />
         <p>
-          Can be serviced all thoughout the United States or other parts of the
+          Can be serviced all throughout the United States or other parts of the
           Country
         </p>
       </div>

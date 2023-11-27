@@ -27,27 +27,27 @@ const Footer = () => {
           </h1>
           <div className="flex">
             <ul className="  font-bold md:whitespace-nowrap lg:grid md:justify-between md:text-xl lg:text-2xl">
-              <li className="   hover:bg-gray-400 hover:p-1 hover:rounded-md md:hover:bg-gray-200 lg:hover:bg-gray-400">
+              <li className="   ">
                 <a href="/" className="  md:mr-3">
                   Home
                 </a>
               </li>
-              <li className=" hover:bg-gray-400  hover:p-01 hover:rounded-md md:hover:bg-gray-200 lg:hover:bg-gray-400">
+              <li className=" ">
                 <a href="/aboutus" className=" md:mr-3">
                   About Us
                 </a>
               </li>
-              <li className="hover:bg-gray-400  hover:p-1 hover:rounded-md md:hover:bg-gray-200 lg:hover:bg-gray-400">
+              <li className="">
                 <a href="/products" className=" md:mr-3">
                   Products
                 </a>
               </li>
-              <li className="hover:bg-gray-400  hover:p-1 hover:rounded-md md:hover:bg-gray-200 lg:hover:bg-gray-400">
+              <li className="">
                 <a href="/sellproducts" className=" md:mr-3">
                   Sell Your Equipment
                 </a>
               </li>
-              <li className="hover:bg-gray-400  hover:p-1 hover:rounded-md md:hover:bg-gray-200 lg:hover:bg-gray-400">
+              <li className="">
                 <a href="/contactus" className=" md:mr-3">
                   Contact Us
                 </a>
@@ -82,6 +82,7 @@ const Footer = () => {
             <Link to="/checkout">
               <img
                 src={visaSvg}
+                alt="visa svg"
                 className="w-14 h-14 opacity-50 hover:opacity-100"
               />
             </Link>
