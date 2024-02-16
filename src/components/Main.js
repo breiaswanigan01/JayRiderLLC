@@ -34,8 +34,8 @@ const Main = () => {
 
   return (
     <>
-      <div className="mt-8">
-        <h1 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold   p-1 md:mt-16 text-blue-900">
+      <div className="">
+        <h1 className="text-center text-4xl md:text-4xl lg:text-5xl font-bold   p-1 md:mt-16 text-blue-900">
           Welcome to JayRider
         </h1>
       </div>
@@ -44,7 +44,7 @@ const Main = () => {
         <Card
           className=""
           description="We buy and sell laboratory, scientific, and medical
-        equipment!"
+        equipment and merchandise!"
           button="Explore Products"
         />
 
@@ -66,17 +66,17 @@ const Main = () => {
             <div className="flex lg:flex lg:justify-between  object-fill  ">
               <img
                 src={labImg1}
-                className=" shadow-md border-4 border-gray-100 w-72 h-72 lg:w-80 lg:h-80 select-none mt-20 m-6  "
+                className=" shadow-md border-4 border-gray-100 w-72 h-72 lg:w-80 lg:h-80 select-none mt-8 md:mt-16 m-6  "
                 alt="img"
               />
               <img
                 src={labImg5}
-                className=" shadow-md border-4 border-gray-100 w-72 h-72 lg:w-screen lg:h-96  m-6 select-none mt-20  "
+                className=" shadow-md border-4 border-gray-100 w-72 h-72 lg:w-screen lg:h-96  m-6 select-none mt-8 md:mt-16  "
                 alt="img"
               />
               <img
                 src={medImg2}
-                className=" shadow-md border-4 border-gray-100 w-72 h-72 lg:w-80 lg:h-80   mt-20   m-6 select-none"
+                className=" shadow-md border-4 border-gray-100 w-72 h-72 lg:w-80 lg:h-80   mt-8 md:mt-16   m-6 select-none"
                 alt="img"
               />
             </div>
