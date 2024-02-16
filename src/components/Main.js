@@ -36,14 +36,14 @@ const Main = () => {
     <>
       <div className="mt-8">
         <h1 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold   p-1 md:mt-16 text-blue-900">
-          Welcome to JayRider Equipment and Transportation
+          Welcome to JayRider
         </h1>
       </div>
       <div className="text-center md:flex md:justify-between lg:flex lg:justify-center md:text-xl ">
         {/* Mobile-friendly content */}
         <Card
           className=""
-          description="We buy, sell, and transport laboratory, scientific, and medical
+          description="We buy and sell laboratory, scientific, and medical
         equipment!"
           button="Explore Products"
         />
@@ -94,31 +94,31 @@ const Main = () => {
         <div>
           <img
             src={equipment2}
-            className=" shadow-lg border-4 p-5 border-gray-200 md:w-36 md:h-36 lg:w-48 lg:h-48    transition ease-out lg:hover:scale-150  lg:hover:ease-in-out lg:hover:duration-300 lg:hover:delay-150 "
+            className=" shadow-lg border-4 p-5 border-gray-200 md:w-36 md:h-36 lg:w-48 lg:h-48    transition ease-out lg:hover:scale-150  lg:hover:ease-in-out lg:hover:duration-500 lg:hover:delay-150 "
           />
         </div>
         <div>
           <img
             src={equipment3}
-            className=" shadow-lg border-4 border-gray-200 md:w-36 md:h-36 lg:w-48 lg:h-48 transition ease-out lg:hover:scale-150  lg:hover:ease-in-out lg:hover:duration-300 lg:hover:delay-150 "
+            className=" shadow-lg border-4 border-gray-200 md:w-36 md:h-36 lg:w-48 lg:h-48 transition ease-out lg:hover:scale-150  lg:hover:ease-in-out lg:hover:duration-500 lg:hover:delay-150 "
           />
         </div>
         <div>
           <img
             src={equipment4}
-            className=" shadow-lg border-4 border-gray-200 md:w-36 md:h-36 lg:w-48 lg:h-48 transition ease-out lg:hover:scale-150  lg:hover:ease-in-out lg:hover:duration-300 lg:hover:delay-150 "
+            className=" shadow-lg border-4 border-gray-200 md:w-36 md:h-36 lg:w-48 lg:h-48 transition ease-out lg:hover:scale-150  lg:hover:ease-in-out lg:hover:duration-500 lg:hover:delay-150 "
           />
         </div>
         <div>
           <img
             src={equipment5}
-            className="  shadow-lg border-4 border-gray-200 md:w-36 md:h-36 lg:w-48 lg:h-48 transition ease-out lg:hover:scale-150  lg:hover:ease-in-out lg:hover:duration-300 lg:hover:delay-150 "
+            className="  shadow-lg border-4 border-gray-200 md:w-36 md:h-36 lg:w-48 lg:h-48 transition ease-out lg:hover:scale-150  lg:hover:ease-in-out lg:hover:duration-500 lg:hover:delay-150 "
           />
         </div>
         <div>
           <img
             src={equipment6}
-            className=" shadow-md border-4 border-gray-200  md:w-36 md:h-36 lg:w-48 lg:h-48 transition ease-out lg:hover:scale-150  lg:hover:ease-in-out lg:hover:duration-300 lg:hover:delay-150 "
+            className=" shadow-md border-4 border-gray-200  md:w-36 md:h-36 lg:w-48 lg:h-48 transition ease-out lg:hover:scale-150  lg:hover:ease-in-out lg:hover:duration-500 lg:hover:delay-150 "
           />
         </div>
         {/* <div>

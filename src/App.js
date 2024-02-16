@@ -19,7 +19,7 @@ function App() {
       <div className="bg-white">
         <Navbar />
 
-        <Routes>
+          <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/products" element={<Products />} />

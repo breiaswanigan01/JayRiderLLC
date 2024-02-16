@@ -12,10 +12,10 @@ export const AboutUs = () => {
       <div className="text-center mb-28 bg-white mt-10 leading-7 text-md md:text-lg rounded-lg m-8 p-4 shadow-lg md:shadow-2xl">
         <p>
           Welcome to JayRider Equipment and Transportation, your trusted partner
-          for all your laboratory, medical, and scientific equipment needs.
+          for all of your laboratory, medical, and scientific equipment needs.
           <br />
-          At JayRider, we specialize in buying, selling, and transporting a wide
-          range of cutting-edge equipment to meet the diverse requirements of
+          At JayRider, we specialize in buying and selling a wide
+          range of cutting-edge equipment and merchandise to meet the diverse requirements of
           the scientific and medical communities
         </p>
         <br />
@@ -33,7 +33,7 @@ export const AboutUs = () => {
           <br />
           Our mission is simple yet profound: to be the preferred partner for
           laboratories, medical facilities, and research institutions seeking
-          reliable and state-of-the-art equipment and transport of equipment. We are driven by a set of
+          reliable and state-of-the-art equipment and merchandise. We are driven by a set of
           core values that include integrity, innovation, and customer
           satisfaction.
         </p>

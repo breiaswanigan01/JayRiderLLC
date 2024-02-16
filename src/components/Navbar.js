@@ -18,29 +18,27 @@ const Navbar = () => {
     <>
       {/* // md screen and bigger nav bar */}
       <div className="relative">
-        <div className=" p-1.5 mb-8 shadow-md ">
-          <div className=" flex justify-between  ">
+        <div className=" p-1.5 mb-8 shadow-sm ">
+          <div className=" flex justify-between   ">
             <Link to="/">
-              <img src={logo} className="w-60  " alt="Logo" />
+              <img src={logo} className="w-40 md:w-60  " alt="Logo" />
             </Link>
             <div className="whitespace-nowrap text-center   text-blue-900 font-bold">
               <div className=" text-center m-2 ">
-                <p className=" text-lg md:text-2xl lg:text-3xl ">
-                  Buy - Sell - Transport{" "}
-                </p>
+                <p className=" text-lg md:text-2xl lg:text-3xl ">Buy - Sell </p>
                 <p className="text-lg md:text-2xl lg:text-3xl ">
                   Medical - Laboratory - Scientific{" "}
                 </p>
               </div>
             </div>
             {/* navbar truck img */}
-            <div className="mt-1 ">
+            {/* <div className="mt-1 ">
               <img
                 src={truckImg}
                 className=" w-56 md:mt-5   rounded-lg "
                 alt="Truck"
               />
-            </div>
+            </div> */}
           </div>
 
           {/*  smaller screen nav bar  */}
