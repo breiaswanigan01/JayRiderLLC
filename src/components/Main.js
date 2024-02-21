@@ -36,7 +36,7 @@ const Main = () => {
     <>
       <div className="">
         <h1 className="text-center text-4xl md:text-4xl lg:text-5xl font-bold   p-1 md:mt-16 text-blue-900">
-          Welcome to JayRider
+          Welcome to JayRiderLLC
         </h1>
       </div>
       <div className="text-center md:flex md:justify-between lg:flex lg:justify-center md:text-xl ">
@@ -94,31 +94,36 @@ const Main = () => {
         <div>
           <img
             src={equipment2}
-            className=" shadow-lg border-4 p-5 border-gray-200 md:w-36 md:h-36 lg:w-48 lg:h-48    transition ease-out lg:hover:scale-150  lg:hover:ease-in-out lg:hover:duration-500 lg:hover:delay-150 "
+            className=" shadow-lg border-4  border-gray-200  md:w-36 md:h-36 lg:w-48 lg:h-48    transform transition duration-300 ease-out hover:scale-[1.15] lg:hover:scale-[1.17] lg:hover:duration-500 lg:hover:delay-150 "
+            alt="img"
           />
         </div>
         <div>
           <img
             src={equipment3}
-            className=" shadow-lg border-4 border-gray-200 md:w-36 md:h-36 lg:w-48 lg:h-48 transition ease-out lg:hover:scale-150  lg:hover:ease-in-out lg:hover:duration-500 lg:hover:delay-150 "
+            className=" shadow-lg border-4 border-gray-200 md:w-36 md:h-36 lg:w-48 lg:h-48 transform transition duration-300 ease-out hover:scale-[1.15] lg:hover:scale-[1.17] lg:hover:duration-500 lg:hover:delay-150 "
+            alt="img"
           />
         </div>
         <div>
           <img
             src={equipment4}
-            className=" shadow-lg border-4 border-gray-200 md:w-36 md:h-36 lg:w-48 lg:h-48 transition ease-out lg:hover:scale-150  lg:hover:ease-in-out lg:hover:duration-500 lg:hover:delay-150 "
+            className=" shadow-lg border-4 border-gray-200 md:w-36 md:h-36 lg:w-48 lg:h-48 transform transition duration-300 ease-out hover:scale-[1.15] lg:hover:scale-[1.17] lg:hover:duration-500 lg:hover:delay-150"
+            alt="img"
           />
         </div>
         <div>
           <img
             src={equipment5}
-            className="  shadow-lg border-4 border-gray-200 md:w-36 md:h-36 lg:w-48 lg:h-48 transition ease-out lg:hover:scale-150  lg:hover:ease-in-out lg:hover:duration-500 lg:hover:delay-150 "
+            className="  shadow-lg border-4 border-gray-200 md:w-36 md:h-36 lg:w-48 lg:h-48 transform transition duration-300 ease-out hover:scale-[1.15] lg:hover:scale-[1.17] lg:hover:duration-500 lg:hover:delay-150 "
+            alt="img"
           />
         </div>
         <div>
           <img
             src={equipment6}
-            className=" shadow-md border-4 border-gray-200  md:w-36 md:h-36 lg:w-48 lg:h-48 transition ease-out lg:hover:scale-150  lg:hover:ease-in-out lg:hover:duration-500 lg:hover:delay-150 "
+            className=" shadow-md border-4 border-gray-200  md:w-36 md:h-36 lg:w-48 lg:h-48 transform transition duration-300 ease-out hover:scale-[1.15] lg:hover:scale-[1.17] lg:hover:duration-500 lg:hover:delay-150 xl:hover:scale-150 "
+            alt="img"
           />
         </div>
         {/* <div>

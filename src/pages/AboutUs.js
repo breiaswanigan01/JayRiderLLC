@@ -24,7 +24,7 @@ export const AboutUs = () => {
           that meets and exceeds industry standards. 
         </p>
         <br />
-        <p>
+   
           <div className="inline-block">
             <h2 className=" mb-6 text-2xl border-b-4 border-blue-900 ">
               Our Mission
@@ -36,7 +36,7 @@ export const AboutUs = () => {
           reliable and state-of-the-art equipment and merchandise. We are driven by a set of
           core values that include integrity, innovation, and customer
           satisfaction.
-        </p>
+    
         <br />
         <p>Commercial and industrial thoughout the Midwest</p>
         <br />

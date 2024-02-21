@@ -64,8 +64,8 @@ const Footer = () => {
           <p className="text-lg lg:text-2xl">
             {" "}
             Please give us a call at{" "}
-            <a href="tel:+2488620663" className="underline text-blue-400  ">
-              248-862-0663
+            <a href="tel:+8552521701" className="underline text-blue-400  ">
+              855-252-1701
             </a>
           </p>
         </div>

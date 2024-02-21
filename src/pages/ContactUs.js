@@ -207,7 +207,7 @@ const ContactUs = () => {
          
         
            
-            <a href="tel:+2488620663"> <FontAwesomeIcon
+            <a href="tel:+8552521701"> <FontAwesomeIcon
                 icon={faPhone}
                 style={{ color: "white" }}
                 className=" cursor-pointer ml-1 items-center bg-blue-900 rounded-full p-3 "
@@ -215,13 +215,13 @@ const ContactUs = () => {
                </a>
               <div className="pl-5">
                 <p className="text-gray-500 text-md">Phone</p>
-                <p className="text-xl  mb-4">(248) 862-0663</p>
+                <p className="text-xl  mb-4">(855) 252-1701</p>
               </div>
             </div>
             <div className=" flex ">
               <a
                 className="text-xl"
-                href="mailto:jayriderllc@gmail.com"
+                href="mailto:jayriderllc@jayriderllc.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
