@@ -94,35 +94,35 @@ const Main = () => {
         <div>
           <img
             src={equipment2}
-            className=" shadow-lg border-4  border-gray-200  md:w-36 md:h-36 lg:w-48 lg:h-48    transform transition duration-300 ease-out hover:scale-[1.15] lg:hover:scale-[1.17] lg:hover:duration-500 lg:hover:delay-150 "
+            className=" shadow-lg border-4  border-gray-200  md:w-36 md:h-36 lg:w-48 lg:h-48    transform transition duration-300 ease-out hover:scale-[1.15] lg:hover:scale-[1.17] lg:hover:duration-500 lg:hover:delay-150 xl:hover:scale-[1.3] "
             alt="img"
           />
         </div>
         <div>
           <img
             src={equipment3}
-            className=" shadow-lg border-4 border-gray-200 md:w-36 md:h-36 lg:w-48 lg:h-48 transform transition duration-300 ease-out hover:scale-[1.15] lg:hover:scale-[1.17] lg:hover:duration-500 lg:hover:delay-150 "
+            className=" shadow-lg border-4 border-gray-200 md:w-36 md:h-36 lg:w-48 lg:h-48 transform transition duration-300 ease-out hover:scale-[1.15] lg:hover:scale-[1.17] lg:hover:duration-500 lg:hover:delay-150 xl:hover:scale-[1.3] "
             alt="img"
           />
         </div>
         <div>
           <img
             src={equipment4}
-            className=" shadow-lg border-4 border-gray-200 md:w-36 md:h-36 lg:w-48 lg:h-48 transform transition duration-300 ease-out hover:scale-[1.15] lg:hover:scale-[1.17] lg:hover:duration-500 lg:hover:delay-150"
+            className=" shadow-lg border-4 border-gray-200 md:w-36 md:h-36 lg:w-48 lg:h-48 transform transition duration-300 ease-out hover:scale-[1.15] lg:hover:scale-[1.17] lg:hover:duration-500 lg:hover:delay-150 xl:hover:scale-[1.3]"
             alt="img"
           />
         </div>
         <div>
           <img
             src={equipment5}
-            className="  shadow-lg border-4 border-gray-200 md:w-36 md:h-36 lg:w-48 lg:h-48 transform transition duration-300 ease-out hover:scale-[1.15] lg:hover:scale-[1.17] lg:hover:duration-500 lg:hover:delay-150 "
+            className="  shadow-lg border-4 border-gray-200 md:w-36 md:h-36 lg:w-48 lg:h-48 transform transition duration-300 ease-out hover:scale-[1.15] lg:hover:scale-[1.17] lg:hover:duration-500 lg:hover:delay-150 xl:hover:scale-[1.3]"
             alt="img"
           />
         </div>
         <div>
           <img
             src={equipment6}
-            className=" shadow-md border-4 border-gray-200  md:w-36 md:h-36 lg:w-48 lg:h-48 transform transition duration-300 ease-out hover:scale-[1.15] lg:hover:scale-[1.17] lg:hover:duration-500 lg:hover:delay-150 xl:hover:scale-150 "
+            className=" shadow-md border-4 border-gray-200  md:w-36 md:h-36 lg:w-48 lg:h-48 transform transition duration-300 ease-out hover:scale-[1.15] lg:hover:scale-[1.17] lg:hover:duration-500 lg:hover:delay-150 xl:hover:scale-[1.3]"
             alt="img"
           />
         </div>

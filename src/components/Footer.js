@@ -5,6 +5,7 @@ import discover from "../svgs/discover.svg";
 import visaSvg from "../svgs/visa.svg";
 import amex from "../svgs/amex.svg";
 import masterCard from "../svgs/mastercard.svg";
+import paypal from "../svgs/paypal.png";
 import logo from "../images/logo2-bg.png";
 import { Link } from "react-router-dom";
 
@@ -70,34 +71,41 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="lg:flex lg:place-content-end  ">
-          <div className=" flex lg:place-content-end cursor-pointer ">
+        <div className="  ">
+          <div className="flex lg:place-content-end cursor-pointer ">
             <Link to="/checkout">
               <img
                 src={discover}
                 alt="discovercard"
-                className="w-14 h-14 opacity-50 hover:opacity-100"
+                className="w-14 h-14 opacity-60 hover:opacity-100"
               />
             </Link>
             <Link to="/checkout">
               <img
                 src={visaSvg}
                 alt="visa svg"
-                className="w-14 h-14 opacity-50 hover:opacity-100"
+                className="w-14 h-14 opacity-60 hover:opacity-100"
+              />
+            </Link>
+            <Link to="/checkout">
+              <img
+                src={paypal}
+                alt="paypal"
+                className="mt-2 w-9 h-9  opacity-60 hover:opacity-100"
               />
             </Link>
             <Link to="/checkout">
               <img
                 src={amex}
                 alt="americanexpress"
-                className="w-14 h-14  opacity-50 hover:opacity-100"
+                className="w-14 h-14  opacity-60 hover:opacity-100"
               />
             </Link>
             <Link to="/checkout">
               <img
                 src={masterCard}
                 alt="mastercard"
-                className="w-14 h-14  opacity-50 hover:opacity-100"
+                className="w-14 h-14  opacity-60 hover:opacity-100"
               />
             </Link>
           </div>

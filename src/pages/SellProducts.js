@@ -146,7 +146,7 @@ const SellProducts = () => {
 
   return (
     <>
-    {/* header */}
+      {/* header */}
       <div className="text-center mb-12">
         <h1 className="pb-4 font-extrabold text-center text-4xl lg:text-5xl border-b-4 border-blue-900  inline-block">
           Sell Your Equipment
@@ -155,7 +155,6 @@ const SellProducts = () => {
       <div className="mx-auto max-w-xl lg:max-w-5xl text-lg bg-white p-6 rounded-2xl">
         {/* sell equipment form start */}
         <form onSubmit={handleSubmit} className="space-y-4">
-        
           <div className="md:flex md:flex-wrap md:-mx-2">
             <div className="md:w-1/2 md:px-2 mb-4">
               {/* first name */}
@@ -207,7 +206,10 @@ const SellProducts = () => {
             {/* number */}
             <label htmlFor="number" className="text-blue-900">
               Number<span className="text-red-500 pl-1">*</span>{" "}
-              <span className="text-black text-sm"> format:(xxx-xxx-xxxx)</span>
+              <span className="text-black text-sm">
+                {" "} {" "} {" "}
+                Format:{" "}(xxx-xxx-xxxx)
+              </span>
             </label>
             <input
               type="text"
@@ -388,7 +390,6 @@ const SellProducts = () => {
           </div>
         </form>
         {/* sell equipment form end */}
-
       </div>
     </>
   );
