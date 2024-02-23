@@ -36,7 +36,7 @@ const Footer = () => {
           <h1 className=" text-3xl md:text-4xl  pb-2 mb-2 text-blue-900">
             Quick Links
           </h1>
-          <div className="font-bold md:whitespace-nowrap lg:grid md:justify-between md:text-xl  ">
+          <div className="font-bold md:whitespace-nowrap grid lg:grid md:justify-between md:text-xl  ">
           
           <Link to="/" className=" font-extrabold ">
                   Home
@@ -90,7 +90,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="  ">
+        {/* <div className="  "> */}
           <div className="flex lg:place-content-end cursor-pointer ">
             <Link to="/checkout">
               <img
@@ -129,7 +129,7 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-      </div>
+      {/* </div> */}
       {/* </div> */}
       <div>
         <Copyright />

@@ -27,12 +27,12 @@ const Navbar = () => {
         <div className=" p-1.5 mb-8 shadow-sm">
           <div className=" flex justify-between">
             <Link to="/">
-              <img src={logo} className="main-logo w-48 md:w-  " alt="Logo" />
+              <img src={logo} className="main-logo w-24 md:w-48  " alt="Logo" />
             </Link>
-            <div className="whitespace-nowrap text-center  text-blue-900 font-bold">
-              <div className="  md:text-center mt-7    ">
-                <p className=" text-xl md:text-2xl  ">Buy - Sell </p>
-                <p className="text-xl md:text-2xl  ">
+            <div className="text-center  text-blue-900 font-bold">
+              <div className="  md:text-center mt-2 md:mt-7 whitespace-nowrap   ">
+                <p className=" text-md md:text-2xl  ">Buy - Sell </p>
+                <p className="text-md md:text-2xl  ">
                   Medical - Laboratory - Scientific{" "}
                 </p>
               </div>

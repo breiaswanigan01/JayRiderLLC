@@ -7,8 +7,10 @@ body {
   font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: rgb(229 231 235);
 }
-/* @media screen and (max-width: 375px) {
-img {
-    width: 100vw;
+/* Custom media query for screen widths smaller than 640px */
+@media (max-width: 639px) {
+  /* Add your CSS rules here */
+  .main-logo {
+    width: 85px;
   }
-} */
+}
