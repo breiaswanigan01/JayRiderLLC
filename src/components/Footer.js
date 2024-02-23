@@ -31,10 +31,10 @@ const Footer = () => {
         </div>
         <div className="lg:mr-40">
           <div className="text-4xl font-semibold mb-4  "> </div>
-          <h1 className=" text-3xl md:text-4xl  pb-2 mb-2 ">
+          <h1 className=" text-3xl md:text-4xl  pb-2 mb-2 text-blue-900">
             Quick Links
           </h1>
-          <div className="font-bold md:whitespace-nowrap lg:grid md:justify-between md:text-xl  text-blue-900">
+          <div className="font-bold md:whitespace-nowrap lg:grid md:justify-between md:text-xl  ">
           
                 <Link to="/" className="  md:mr-3" onClick={scrollToTop}>
                   Home
