@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { db, storage } from "../firebase"; // Import your Firebase configuration
 import { collection, addDoc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
@@ -6,9 +6,9 @@ import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { v4 } from "uuid";
 const SellProducts = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top when the component loads
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0); // Scroll to the top when the component loads
+  // }, []);
 
   const [formData, setFormData] = useState({
     firstName: "",

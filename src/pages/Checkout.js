@@ -1,9 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 const Checkout = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top when the component loads
-  }, []);
+  
   return (
     <div>
       <>
