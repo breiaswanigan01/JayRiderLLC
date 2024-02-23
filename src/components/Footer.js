@@ -10,6 +10,14 @@ import logo from "../images/logo2-bg.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  // so that when the links are clicked, the page goes to the top. 
+    const scrollToTop = (event) => {
+      event.preventDefault(); 
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    };
   return (
     <footer className="  text-black p-6 mt-64 ">
       <div className="  md:flex md:justify-between md:m-4  ">
@@ -17,43 +25,38 @@ const Footer = () => {
           <div className="mb-8 m-2 ">
             {/* display logo again */}
             <Link to="/">
-              <img src={logo} alt="logo" className="w-40 md:w-48 lg:w-56" />
+              <img src={logo} alt="logo" className="w-40 md:w-48 lg:w-56" onClick={scrollToTop}/>
             </Link>
           </div>
         </div>
         <div className="lg:mr-40">
           <div className="text-4xl font-semibold mb-4  "> </div>
-          <h1 className=" text-3xl md:text-4xl lg:text-5xl pb-2 mb-2 text-blue-900">
+          <h1 className=" text-3xl md:text-4xl  pb-2 mb-2 ">
             Quick Links
           </h1>
-          <div className="flex">
-            <ul className="  font-bold md:whitespace-nowrap lg:grid md:justify-between md:text-xl lg:text-2xl">
-              <li className="   ">
-                <a href="/" className="  md:mr-3">
+          <div className="font-bold md:whitespace-nowrap lg:grid md:justify-between md:text-xl  text-blue-900">
+          
+                <Link to="/" className="  md:mr-3" onClick={scrollToTop}>
                   Home
-                </a>
-              </li>
-              <li className=" ">
-                <a href="/aboutus" className=" md:mr-3">
+                </Link>
+            
+                <Link to="/aboutus" className=" md:mr-3" onClick={scrollToTop}>
                   About Us
-                </a>
-              </li>
-              <li className="">
-                <a href="/products" className=" md:mr-3">
+                </Link>
+            
+                <Link to="/products" className=" md:mr-3" onClick={scrollToTop}>
                   Products
-                </a>
-              </li>
-              <li className="">
-                <a href="/sellproducts" className=" md:mr-3">
-                  Sell Your Equipment
-                </a>
-              </li>
-              <li className="">
-                <a href="/contactus" className=" md:mr-3">
+                </Link>
+       
+                <Link to="/sellproducts" className=" md:mr-3" onClick={scrollToTop}>
+                  Sell Your Products
+                </Link>
+          
+                <Link to="/contactus" className=" md:mr-3" onClick={scrollToTop}>
                   Contact Us
-                </a>
-              </li>
-            </ul>
+                </Link>
+         
+         
           </div>
         </div>
       </div>

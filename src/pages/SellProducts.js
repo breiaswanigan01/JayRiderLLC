@@ -149,7 +149,7 @@ const SellProducts = () => {
       {/* header */}
       <div className="text-center mb-12">
         <h1 className="pb-4 font-extrabold text-center text-4xl lg:text-5xl border-b-4 border-blue-900  inline-block">
-          Sell Your Equipment
+          Sell Your Product
         </h1>
       </div>
       <div className="mx-auto max-w-xl lg:max-w-5xl text-lg bg-white p-6 rounded-2xl">
