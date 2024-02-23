@@ -11,7 +11,7 @@ export const AboutUs = () => {
       </div>
       <div className="text-center mb-28 bg-white mt-10 leading-7 text-md md:text-lg rounded-lg m-8 p-4 shadow-lg md:shadow-2xl">
         <p>
-          Welcome to JayRider Equipment and Transportation, your trusted partner
+          Welcome to JayRider Equipment and Merchandise, your trusted partner
           for all of your laboratory, medical, and scientific equipment needs.
           <br />
           At JayRider, we specialize in buying and selling a wide

@@ -41,17 +41,17 @@ const Main = () => {
       </div>
       <div className="text-center md:flex md:justify-between lg:flex lg:justify-center md:text-xl ">
         {/* Mobile-friendly content */}
-        <Card
+        {/* <Card
           className=""
           description="We buy and sell laboratory, scientific, and medical
         equipment and merchandise!"
           button="Explore Products"
-        />
+        /> */}
 
-        <div className="flex items-center justify-center">
+        <div className="flex items-center ">
           <MdChevronLeft
             onClick={scrollLeft}
-            className="text-blue-900 text-6xl cursor-pointer lg:hidden mt-16"
+            className="text-blue-900 text-6xl cursor-pointer lg:hidden mt-16 "
           />
           <div
             ref={sliderRef}
@@ -66,17 +66,17 @@ const Main = () => {
             <div className="flex lg:flex lg:justify-between  object-fill  ">
               <img
                 src={labImg1}
-                className=" shadow-md border-4 border-gray-100 w-72 h-72 lg:w-80 lg:h-80 select-none mt-8 md:mt-16 m-6  "
+                className=" shadow-md border-4 border-gray-100 w-72 h-72 lg:w-80 lg:h-80 select-none mr-3 mt-8 md:mt-16 lg:m-6  "
                 alt="img"
               />
               <img
                 src={labImg5}
-                className=" shadow-md border-4 border-gray-100 w-72 h-72 lg:w-screen lg:h-96  m-6 select-none mt-8 md:mt-16  "
+                className=" shadow-md border-4 border-gray-100 w-72 h-72 lg:w-screen lg:h-96   select-none m-3 mt-8 md:mt-16 lg:m-6  "
                 alt="img"
               />
               <img
                 src={medImg2}
-                className=" shadow-md border-4 border-gray-100 w-72 h-72 lg:w-80 lg:h-80   mt-8 md:mt-16   m-6 select-none"
+                className=" shadow-md border-4 border-gray-100 w-72 h-72 lg:w-80 lg:h-80 m-3   mt-8 md:mt-16  lg:m-6   select-none"
                 alt="img"
               />
             </div>

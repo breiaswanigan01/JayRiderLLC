@@ -1,11 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- /* importing google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&family=Nunito&display=swap');
- body{
-
-  font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-background-color: rgb(229 231 235);
-
- }
+/* importing google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&family=Nunito&display=swap");
+body {
+  font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(229 231 235);
+}
+/* @media screen and (max-width: 375px) {
+img {
+    width: 100vw;
+  }
+} */

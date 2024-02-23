@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <>
       <div>
-        <h2 className="text-2xl md:text-3xl lg:text-4xl  text-center pt-3 xl:pt-4 text-blue-900 font-bold drop-shadow-md">
+        <h2 className="text-2xl lg:text-3xl  text-center pt-3 xl:pt-4 text-blue-900 font-bold drop-shadow-md">
           JayRider Transportation LLC
         </h2>
       </div>
@@ -27,11 +27,11 @@ const Navbar = () => {
         <div className=" p-1.5 mb-8 shadow-sm">
           <div className=" flex justify-between">
             <Link to="/">
-              <img src={logo} className="w-48 md:w-  " alt="Logo" />
+              <img src={logo} className="main-logo w-48 md:w-  " alt="Logo" />
             </Link>
             <div className="whitespace-nowrap text-center  text-blue-900 font-bold">
-              <div className=" text-right md:text-center mt-9    ">
-                <p className=" text-xl md:text-2xl  ">Buy & Sell </p>
+              <div className="  md:text-center mt-7    ">
+                <p className=" text-xl md:text-2xl  ">Buy - Sell </p>
                 <p className="text-xl md:text-2xl  ">
                   Medical - Laboratory - Scientific{" "}
                 </p>
