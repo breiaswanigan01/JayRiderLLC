@@ -36,7 +36,7 @@ const Footer = () => {
           <h1 className=" text-3xl md:text-4xl  pb-2 mb-2 text-blue-900">
             Quick Links
           </h1>
-          <div className="font-bold md:whitespace-nowrap grid lg:grid md:justify-between md:text-xl  ">
+          <div className="footer-links font-bold md:whitespace-nowrap grid lg:grid md:justify-between md:text-xl  ">
           
           <Link to="/" className=" font-extrabold ">
                   Home
@@ -57,7 +57,7 @@ const Footer = () => {
                   to="/sellproducts"
                   className=" font-extrabold "
                 >
-                  Sell Products
+                  Sell Your Product
                 </Link>
                 <Link
                   to="/contactus"

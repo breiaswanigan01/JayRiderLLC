@@ -17,7 +17,7 @@ const Checkout = () => {
             </Link>
           </div>
           <div className="">
-            <p className="text-xl mt-10 ">
+            <p className="checkout-text text-xl mt-10 ">
               There are no items in your shopping cart.
             </p>
           </div>

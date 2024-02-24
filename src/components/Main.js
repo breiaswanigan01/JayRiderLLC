@@ -35,7 +35,7 @@ const Main = () => {
   return (
     <>
       <div className="">
-        <h1 className="text-center text-4xl md:text-4xl lg:text-5xl font-bold   p-1 md:mt-16 text-blue-900">
+        <h1 className="main-header text-center text-4xl  lg:text-5xl font-bold   p-1 md:mt-16 text-blue-900">
           Welcome to JayRiderLLC
         </h1>
       </div>
@@ -132,7 +132,7 @@ const Main = () => {
       </div>
       <div>
         <img
-          className=" mt-4 w-full h-[100vh] object-fill md:object-cover  select-none "
+          className=" homepage-img mt-4 w-full h-[100vh] object-fill md:object-cover  select-none "
           src={homepageImg}
           alt="homepage-img"
         />
