@@ -100,7 +100,7 @@ const Navbar = () => {
               </button>
 
               <div
-                className={`bg-blue-600 fixed top-0 right-0 h-full w-64 p-3 transition-all duration-300 ${
+                className={`bg-gray-200  fixed top-0 right-0 h-full w-64 p-3 transition-all duration-300 ${
                   showNav
                     ? "transform translate-x-0"
                     : "transform translate-x-full"
