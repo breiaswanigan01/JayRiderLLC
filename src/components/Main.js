@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import homepageImg from "../images/med-room.jpeg";
 import Card from "./Card";
 import labImg1 from "../images/labequipment-2.jpeg";
@@ -13,24 +13,42 @@ import equipment6 from "../images/equipment6.jpg";
 
 const Main = () => {
   const sliderRef = useRef(null);
+const [scrollPosition, setScrollPosition] = useState(0);
+const [maxScroll, setMaxScroll] = useState(0);
 
-  const scrollLeft = () => {
-    if (sliderRef.current) {
-      sliderRef.current.scrollBy({
-        left: -200,
-        behavior: "smooth",
-      });
-    }
-  };
+const imageWidth = 288; //Width of each Img
+const imageMargin = 16; //Margin between images
+const totalImages = 3; //# of images in the sider
 
-  const scrollRight = () => {
-    if (sliderRef.current) {
-      sliderRef.current.scrollBy({
-        left: 200,
-        behavior: "smooth",
-      });
-    }
-  };
+
+useEffect(() => {
+  if (sliderRef.current) {
+    setMaxScroll((imageWidth + imageMargin) * totalImages - sliderRef.current.clientWidth);
+  }
+}, [imageWidth, imageMargin, totalImages]);
+
+const scrollLeft = () => {
+  if (sliderRef.current) {
+    const newScrollPosition = Math.max(scrollPosition - (imageWidth + imageMargin), 0);
+    sliderRef.current.scrollTo({
+      left: newScrollPosition,
+      behavior: "smooth",
+    });
+    setScrollPosition(newScrollPosition);
+  }
+};
+
+const scrollRight = () => {
+  if (sliderRef.current) {
+    const newScrollPosition = Math.min(scrollPosition + (imageWidth + imageMargin), maxScroll);
+    sliderRef.current.scrollTo({
+      left: newScrollPosition,
+      behavior: "smooth",
+    });
+    setScrollPosition(newScrollPosition);
+  }
+};
+
 
   return (
     <>
@@ -49,17 +67,17 @@ const Main = () => {
         /> */}
 
         <div className="flex items-center ">
-          <MdChevronLeft
+        <MdChevronLeft
             onClick={scrollLeft}
-            className="text-blue-900 text-6xl cursor-pointer lg:hidden mt-16 "
+            className={`text-blue-900 text-6xl cursor-pointer lg:hidden mt-16 ${scrollPosition === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+            disabled={scrollPosition === 0}
           />
           <div
             ref={sliderRef}
-            className=" overflow-x-auto scrollbar-hide space-x-4 p-2 w-full"
+            className="overflow-x-auto scrollbar-hide space-x-4 p-2 w-full"
             style={{
               scrollSnapType: "x mandatory",
               width: "100%",
-
               transform: "translateX(0)",
             }}
           >
@@ -83,7 +101,8 @@ const Main = () => {
           </div>
           <MdChevronRight
             onClick={scrollRight}
-            className="text-blue-900 text-6xl cursor-pointer lg:hidden mt-16 "
+            className={`text-blue-900 text-6xl cursor-pointer lg:hidden mt-16 ${scrollPosition >= maxScroll ? 'opacity-50 cursor-not-allowed' : ''}`}
+            disabled={scrollPosition >= maxScroll}
           />
         </div>
       </div>
