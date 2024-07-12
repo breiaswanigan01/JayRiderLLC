@@ -4,7 +4,6 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo2-bg.png";
-import truckImg from "../images/truck-img.jpeg";
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);

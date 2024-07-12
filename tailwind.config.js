@@ -4,6 +4,10 @@ module.exports = {
   theme: {
     extend: {
       scale: {
+        96: "0.96",
+        97: "0.97",
+        98: "0.98",
+        99: "0.99",
         115: "1.15",
         116: "1.16",
         117: "1.17",
@@ -31,6 +35,10 @@ module.exports = {
         '74px': '74px',
         '75px': '75px',
         '76px': '76px',
+      },
+      screens: {
+        'custom-lg': '1061px',
+        'custom-lg-arrows': '995px',
       },
     },
   },

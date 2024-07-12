@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import smoothscroll from "smoothscroll-polyfill";
 import homepageImg from "../images/med-room.jpeg";
 import Card from "./Card";
 import labImg1 from "../images/labequipment-2.jpeg";
@@ -13,103 +14,148 @@ import equipment6 from "../images/equipment6.jpg";
 
 const Main = () => {
   const sliderRef = useRef(null);
-const [scrollPosition, setScrollPosition] = useState(0);
-const [maxScroll, setMaxScroll] = useState(0);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [maxScroll, setMaxScroll] = useState(0);
 
-const imageWidth = 288; //Width of each Img
-const imageMargin = 16; //Margin between images
-const totalImages = 3; //# of images in the sider
+  useEffect(() => {
+    smoothscroll.polyfill();
 
+    const updateMaxScroll = () => {
+      if (sliderRef.current) {
+        const totalScrollWidth = Array.from(
+          sliderRef.current.children[0].children
+        ).reduce((totalWidth, img) => {
+          return (
+            totalWidth +
+            img.offsetWidth +
+            parseInt(window.getComputedStyle(img).marginRight)
+          );
+        }, 0);
+        const visibleWidth = sliderRef.current.clientWidth;
+        const maxScrollValue = totalScrollWidth - visibleWidth;
+        setMaxScroll(maxScrollValue);
+      }
+    };
 
-useEffect(() => {
-  if (sliderRef.current) {
-    setMaxScroll((imageWidth + imageMargin) * totalImages - sliderRef.current.clientWidth);
-  }
-}, [imageWidth, imageMargin, totalImages]);
+    updateMaxScroll();
 
-const scrollLeft = () => {
-  if (sliderRef.current) {
-    const newScrollPosition = Math.max(scrollPosition - (imageWidth + imageMargin), 0);
-    sliderRef.current.scrollTo({
-      left: newScrollPosition,
-      behavior: "smooth",
-    });
-    setScrollPosition(newScrollPosition);
-  }
-};
+    window.addEventListener("resize", updateMaxScroll);
+    return () => window.removeEventListener("resize", updateMaxScroll);
+  }, []);
+  useEffect(() => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollLeft = 0;
+      setScrollPosition(0);
+    }
+  }, []);
+  const smoothScroll = (element, start, end, duration) => {
+    const startTime = performance.now();
 
-const scrollRight = () => {
-  if (sliderRef.current) {
-    const newScrollPosition = Math.min(scrollPosition + (imageWidth + imageMargin), maxScroll);
-    sliderRef.current.scrollTo({
-      left: newScrollPosition,
-      behavior: "smooth",
-    });
-    setScrollPosition(newScrollPosition);
-  }
-};
+    const scroll = (currentTime) => {
+      const elapsedTime = currentTime - startTime;
+      const progress = Math.min(elapsedTime / duration, 1);
+      const newPos = start + (end - start) * progress;
 
+      element.scrollLeft = newPos;
+
+      if (progress < 1) {
+        requestAnimationFrame(scroll);
+      }
+    };
+
+    requestAnimationFrame(scroll);
+  };
+
+  const scrollLeft = () => {
+    if (sliderRef.current) {
+      const newScrollPosition = Math.max(
+        scrollPosition - sliderRef.current.clientWidth / 2,
+        0
+      );
+      smoothScroll(sliderRef.current, scrollPosition, newScrollPosition, 250); // Adjust duration as needed
+      setScrollPosition(newScrollPosition);
+    }
+  };
+
+  const scrollRight = () => {
+    if (sliderRef.current) {
+      const newScrollPosition = Math.min(
+        scrollPosition + sliderRef.current.clientWidth / 2,
+        maxScroll
+      );
+      smoothScroll(sliderRef.current, scrollPosition, newScrollPosition, 250); // Adjust duration as needed
+      setScrollPosition(newScrollPosition);
+    }
+  };
+
+  const handleScroll = () => {
+    if (sliderRef.current) {
+      const newScrollLeft = sliderRef.current.scrollLeft;
+      setScrollPosition(newScrollLeft);
+      console.log("Current Scroll Position:", newScrollLeft);
+    }
+  };
 
   return (
     <>
-      <div className="">
+      <div>
         <h1 className="main-header text-center text-4xl  lg:text-5xl font-bold   p-1 md:mt-16 text-blue-900">
           Welcome to JayRiderLLC
         </h1>
       </div>
-      <div className="text-center md:flex md:justify-between lg:flex lg:justify-center md:text-xl ">
-        {/* Mobile-friendly content */}
-        {/* <Card
-          className=""
-          description="We buy and sell laboratory, scientific, and medical
-        equipment and merchandise!"
-          button="Explore Products"
-        /> */}
-
-        <div className="flex items-center ">
-        <MdChevronLeft
+      <div className="text-center md:flex md:justify-center lg:flex lg:justify-center md:text-xl">
+        <div className="flex items-center">
+          <MdChevronLeft
             onClick={scrollLeft}
-            className={`text-blue-900 text-6xl cursor-pointer lg:hidden mt-16 ${scrollPosition === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+            className={`text-blue-900 text-6xl cursor-pointer custom-lg-arrows:hidden lg:hidden mt-16 ${
+              scrollPosition === 0 ? "opacity-50 cursor-not-allowed" : ""
+            }`}
             disabled={scrollPosition === 0}
+            aria-hidden={scrollPosition === 0}
           />
           <div
             ref={sliderRef}
+            onScroll={handleScroll}
             className="overflow-x-auto scrollbar-hide space-x-4 p-2 w-full"
             style={{
               scrollSnapType: "x mandatory",
-              width: "100%",
-              transform: "translateX(0)",
+              display: "flex",
+              // width: "100%",
+              overflow: "hidden",
+              WebkitOverflowScrolling: "touch",
+              msOverflowStyle: "-ms-autohiding-scrollbar",
+              scrollBehavior: "smooth",
             }}
           >
-            <div className="flex lg:flex lg:justify-between  object-fill  ">
+            <div className="flex custom-lg-arrows:flex custom-lg-arrows:justify-center custom-lg-arrows:gap-x-4 custom-lg-arrows:mr-2 custom-lg-arrows:ml-2 xl:flex xl:gap-x-20">
               <img
                 src={labImg1}
-                className=" shadow-md border-4 border-gray-100 w-72 h-72 lg:w-80 lg:h-80 select-none mr-3 mt-8 md:mt-16 lg:m-6  "
+                className="shadow-md border-4 border-gray-100 w-72 h-72  lg:w-80 lg:h-80 xl:w-96 select-none mr-2 mt-8 md:mt-16 lg:ml-4 "
                 alt="img"
               />
               <img
                 src={labImg5}
-                className=" shadow-md border-4 border-gray-100 w-72 h-72 lg:w-screen lg:h-96   select-none m-3 mt-8 md:mt-16 lg:m-6  "
+                className="shadow-md border-4 border-gray-100 w-72 h-72 lg:w-80 lg:h-80 xl:w-96 select-none m-2 mt-8 md:mt-16 "
                 alt="img"
               />
               <img
                 src={medImg2}
-                className=" shadow-md border-4 border-gray-100 w-72 h-72 lg:w-80 lg:h-80 m-3   mt-8 md:mt-16  lg:m-6   select-none"
+                className="shadow-md border-4 border-gray-100 w-72 h-72 lg:w-80 lg:h-80 xl:w-96 m-2 mt-8 md:mt-16 lg:mr-6  select-none"
                 alt="img"
               />
             </div>
           </div>
           <MdChevronRight
             onClick={scrollRight}
-            className={`text-blue-900 text-6xl cursor-pointer lg:hidden mt-16 ${scrollPosition >= maxScroll ? 'opacity-50 cursor-not-allowed' : ''}`}
+            className={`text-blue-900 text-6xl cursor-pointer custom-lg-arrows:hidden lg:hidden mt-16 ${
+              scrollPosition >= maxScroll ? "opacity-50 cursor-not-allowed" : ""
+            }`}
             disabled={scrollPosition >= maxScroll}
+            aria-hidden={scrollPosition >= maxScroll}
           />
         </div>
       </div>
       <div className="hidden  md:flex md:justify-evenly lg:mt-7 lg:mb-14 ">
-        {/* <div>
-          <img src={equipment1} className="w-44 h-44" />
-        </div> */}
         <div>
           <img
             src={equipment2}
@@ -145,13 +191,11 @@ const scrollRight = () => {
             alt="img"
           />
         </div>
-        {/* <div>
-          <img src={equipment7} className="w-44 h-44" />
-        </div> */}
       </div>
+
       <div>
         <img
-          className=" homepage-img mt-4 w-full h-[100vh] object-fill md:object-cover  select-none "
+          className=" homepage-img mt-4 w-[100vw] h-[100vh] object-fit md:object-cover  select-none lg:p-2 "
           src={homepageImg}
           alt="homepage-img"
         />

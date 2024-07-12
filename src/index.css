@@ -7,27 +7,45 @@ body {
   font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: rgb(229 231 235);
 }
+ /* Custom CSS */
+.overflow-x-auto {
+  overflow-x: scroll;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, and Opera */
+}
+
+
+
+
+
 /* Custom media query for screen widths smaller than 640px */
-@media (max-width: 640px) {
+@media screen and (max-width: 640px) {
   /* Add your CSS rules here */
-  .main-header {
-    font-size: 1.875rem; /* 30px */
-    line-height: 2.25rem; /* 36px */
-  }
+  /* .main-header { */
+    /* font-size: 1.875rem; 30px */
+    /* line-height: 2.25rem; 36px */
+  /* }
   .nav-logo {
     width: 80px;
-  }
-  .nav-top-header {
-    white-space: normal;
-    font-size: 1.25rem; /* 20px */
-    line-height: 1.75rem; /* 28px */
-  }
-  .nav-text {
-    font-size: 0.875rem; /* 16px */
-    line-height: 1.25rem; /* 24px */
-  }
+  } */
+  /* .nav-top-header {
+    white-space: normal; */
+    /* font-size: 1.25rem; 20px */
+    /* line-height: 1.75rem; 28px */
+  /* } */
+  /* .nav-text { */
+    /* font-size: 0.875rem; 16px */
+    /* line-height: 1.25rem; 24px */
+  /* }
   .checkout-text {
     margin: 10px;
     margin-top: 2rem;
-  }
+  } */
 }
