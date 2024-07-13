@@ -130,17 +130,17 @@ const Main = () => {
             <div className="flex custom-lg-arrows:flex custom-lg-arrows:justify-center custom-lg-arrows:gap-x-4 custom-lg-arrows:mr-2 custom-lg-arrows:ml-2 xl:flex xl:gap-x-20">
               <img
                 src={labImg1}
-                className="shadow-md border-4 border-gray-100 w-72 h-72  lg:w-80 lg:h-80 xl:w-96 select-none mr-2 mt-8 md:mt-16 lg:ml-4 "
+                className="shadow-md border-4 lg:border-8 border-gray-100 w-72 h-72  lg:w-80 lg:h-80 xl:w-96 select-none mr-2 mt-8 md:mt-16 lg:ml-4 "
                 alt="img"
               />
               <img
                 src={labImg5}
-                className="shadow-md border-4 border-gray-100 w-72 h-72 lg:w-80 lg:h-80 xl:w-96 select-none m-2 mt-8 md:mt-16 "
+                className="shadow-md border-4 lg:border-8 border-gray-100 w-72 h-72 lg:w-80 lg:h-80 xl:w-96 select-none m-2 mt-8 md:mt-16 "
                 alt="img"
               />
               <img
                 src={medImg2}
-                className="shadow-md border-4 border-gray-100 w-72 h-72 lg:w-80 lg:h-80 xl:w-96 m-2 mt-8 md:mt-16 lg:mr-6  select-none"
+                className="shadow-md border-4 lg:border-8 border-gray-100 w-72 h-72 lg:w-80 lg:h-80 xl:w-96 m-2 mt-8 md:mt-16 lg:mr-6  select-none"
                 alt="img"
               />
             </div>
@@ -195,7 +195,7 @@ const Main = () => {
 
       <div>
         <img
-          className=" homepage-img mt-4 w-[100vw] h-[100vh] object-fit md:object-cover  select-none lg:p-2 "
+          className=" homepage-img mt-4 w-[100vw] h-[100vh] object-fit md:object-fill lg:transform lg:scale-100 lg:p-1 select-none  "
           src={homepageImg}
           alt="homepage-img"
         />
